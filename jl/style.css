@@ -1,0 +1,290 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: #fffdf9;
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-color: #0a192f;
+  color: white;
+  padding: 20px 0;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* Hero */
+.hero {
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: #d4af37;
+  color: #0a192f;
+  padding: 8px 8px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #b9962c;
+}
+
+/* Collections */
+.collections {
+  padding: 60px 20px;
+  text-align: center;
+}
+.collection-grid {
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.card {
+ 
+  width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0,0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* About */
+.about {
+  background-color: #f8f4ec;
+  padding: 60px 20px;
+  text-align: center;
+}
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Contact CTA */
+.cta {
+  background-color: #0a192f;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.cta p {
+  margin: 15px 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+
+
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Utility Class */
+.scroll-animate {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Delay Variants (Optional) */
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+/*Card Anime*/
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  padding: 40px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.hero h2 {
+  color: #ffd700; /* gold */
+}
+
+.hero p {
+  color: #f5f5dc; /* beige/off-white */
+}
+
+.hero h2, .hero p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+
+/*Collections Pages*/
+.collection-detail {
+  padding: 60px 20px;
+  text-align: center;
+}
+.collection-detail .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.collection-detail .item {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.collection-detail .item img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.collection-detail .item h3 {
+  color: #0a192f;
+  margin-bottom: 8px;
+}
+
+
+/* update css for btn */
+
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 8px 0 4px;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 12px;
+  min-height: 50px;
+}
+
+.card .btn {
+  background-color: #f3c200;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: auto;
+}
